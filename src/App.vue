@@ -90,10 +90,10 @@ const closeSidebar = () => {
   >
     <news-letter-subscription class="w-full -mt-32 mb-8" />
 
-    <div class="flex md:flex-row justify-between mt-8">
-      <div class="basis-1/3">
-        <app-header class="mb-6">Shop.co</app-header>
-        <p class="text-sm text-gray-600 mb-8">
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-4 mt-8">
+      <div class="col-span-2">
+        <app-header class="mb-3 md:mb-6">Shop.co</app-header>
+        <p class="text-sm text-gray-600 mb-4 md:mb-8">
           We have clothes that suit your style and which you're proud to wear. From women to men.
         </p>
         <div class="flex gap-3 mt-4">
@@ -119,7 +119,7 @@ const closeSidebar = () => {
           </span>
         </div>
       </div>
-      <div>
+      <div class="sm:col-start-1 md:col-start-3">
         <h3 class="text-lg font-semibold text-gray-700 mb-4 uppercase tracking-widest">Company</h3>
         <ul class="flex flex-col gap-1.5 text-gray-500">
           <li>About</li>
@@ -128,50 +128,56 @@ const closeSidebar = () => {
           <li>Career</li>
         </ul>
       </div>
-      <div>
+      <div class="sm:col-start-2 md:col-start-4">
         <h3 class="text-lg font-semibold text-gray-700 mb-4 uppercase tracking-widest">Help</h3>
         <ul class="flex flex-col gap-1.5 text-gray-500">
-          <li>About</li>
-          <li>Features</li>
-          <li>Works</li>
-          <li>Career</li>
+          <li>Customer Support</li>
+          <li>Delivery Details</li>
+          <li>Terms & Conditions</li>
+          <li>Privacy & Policy</li>
         </ul>
       </div>
-      <div>
+      <div class="sm:col-start-1 md:col-start-5">
         <h3 class="text-lg font-semibold text-gray-700 mb-4 uppercase tracking-widest">Faq</h3>
         <ul class="flex flex-col gap-1.5 text-gray-500">
-          <li>About</li>
-          <li>Features</li>
-          <li>Works</li>
-          <li>Career</li>
+          <li>Account</li>
+          <li>Manage Deliveries</li>
+          <li>Orders</li>
+          <li>Payment</li>
         </ul>
       </div>
-      <div>
+      <div class="sm:col-start-2 md:col-start-6">
         <h3 class="text-lg font-semibold text-gray-700 mb-4 uppercase tracking-widest">
           Resources
         </h3>
         <ul class="flex flex-col gap-1.5 text-gray-500">
-          <li>About</li>
-          <li>Features</li>
-          <li>Works</li>
-          <li>Career</li>
+          <li>Free eBook</li>
+          <li>Development Tutorial</li>
+          <li>How to - Blog</li>
+          <li>Youtube Playlist</li>
         </ul>
       </div>
     </div>
     <div class="bg-gray-200 w-full h-px mt-9 mb-4"></div>
-    <div class="flex justify-between items-center">
-      <p class="text-gray-500 text-sm">Shop.co © 2025-2026. All Rights Reserved</p>
+    <div class="flex gap-2 flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-500 text-sm text-center md:text-start">
+        Shop.co © 2025-2026. All Rights Reserved
+      </p>
       <div class="flex gap-3">
-        <span class="bg-white rounded-lg"><app-icon name="visa-badge" class="w-16 h-10" /></span>
-        <span class="bg-white rounded-lg"
-          ><app-icon name="mastercard-badge" class="w-16 h-10"
+        <span class="bg-white rounded-lg flex items-center justify-center"
+          ><app-icon name="visa-badge" class="md:w-16 md:h-10"
         /></span>
-        <span class="bg-white rounded-lg"><app-icon name="paypal-badge" class="w-16 h-10" /></span>
-        <span class="bg-white rounded-lg"
-          ><app-icon name="applepay-badge" class="w-16 h-10"
+        <span class="bg-white rounded-lg flex items-center justify-center"
+          ><app-icon name="mastercard-badge" class="md:w-16 md:h-10"
         /></span>
-        <span class="bg-white rounded-lg"
-          ><app-icon name="googlepay-badge" class="w-16 h-10 px-3"
+        <span class="bg-white rounded-lg flex items-center justify-center"
+          ><app-icon name="paypal-badge" class="w-16 h-10"
+        /></span>
+        <span class="bg-white rounded-lg flex items-center justify-center"
+          ><app-icon name="applepay-badge" class="md:w-16 md:h-10"
+        /></span>
+        <span class="bg-white rounded-lg flex items-center justify-center"
+          ><app-icon name="googlepay-badge" class="md:w-16 md:h-10 px-1.5 md:px-3"
         /></span>
       </div>
     </div>
