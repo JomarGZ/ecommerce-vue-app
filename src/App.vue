@@ -78,10 +78,16 @@ const closeSidebar = () => {
     </ul>
     <div class="flex gap-3 items-center">
       <app-search-bar class="hidden sm:flex items-center w-xs md:w-sm xl:w-xl" />
-      <router-link to="#">
-        <app-icon name="shopping-cart" class="w-6 h-6 stroke-2" />
-      </router-link>
-      <app-profile />
+      <template v-if="true">
+        <router-link :to="{ name: 'register' }" class="hover:underline"> Signup </router-link>
+        <router-link :to="{ name: 'login' }" class="hover:underline"> Login </router-link>
+      </template>
+      <template v-else>
+        <router-link to="#">
+          <app-icon name="shopping-cart" class="w-6 h-6 stroke-2" />
+        </router-link>
+        <app-profile />
+      </template>
     </div>
   </app-section-wrapper>
   <RouterView />
