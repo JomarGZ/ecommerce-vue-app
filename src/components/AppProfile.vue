@@ -1,11 +1,13 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import AppIcon from './icons/AppIcon.vue'
+import { useAuthStore } from '@/stores/authStore'
 const isOpen = ref(false)
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value
 }
 const dropdownBtn = ref(null)
+const auth = useAuthStore()
 
 const handleClickOutSide = (event) => {
   const dropdownElement = dropdownBtn.value
@@ -13,7 +15,9 @@ const handleClickOutSide = (event) => {
     isOpen.value = false
   }
 }
-onMounted(() => document.addEventListener('click', handleClickOutSide))
+onMounted(() => {
+  document.addEventListener('click', handleClickOutSide)
+})
 onBeforeUnmount(() => document.removeEventListener('click', handleClickOutSide))
 </script>
 <template>
@@ -38,7 +42,10 @@ onBeforeUnmount(() => document.removeEventListener('click', handleClickOutSide))
         <router-link to="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
           Orders
         </router-link>
-        <button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+        <button
+          @click="auth.logout"
+          class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+        >
           Sign out
         </button>
       </div>
