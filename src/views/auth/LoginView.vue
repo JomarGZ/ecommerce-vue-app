@@ -1,3 +1,9 @@
+<script setup>
+import TheLogin from '@/components/TheLogin.vue'
+</script>
+
 <template>
-  <h2>Login</h2>
+  <main>
+    <TheLogin />
+  </main>
 </template>

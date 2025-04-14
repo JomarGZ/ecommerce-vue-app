@@ -9,7 +9,6 @@ import ProductNewArrivalPanel from '@/components/ProductNewArrivalPanel.vue'
 import ProductTopSellingPanel from '@/components/ProductTopSellingPanel.vue'
 import ProductCategoryPanel from '@/components/ProductCategoryPanel.vue'
 import TestimonialsCarousel from '@/components/TestimonialsCarousel.vue'
-import NewsLetterSubscription from '@/components/NewsLetterSubscription.vue'
 </script>
 
 <template>
