@@ -29,7 +29,6 @@ const onSubmit = async (values, { setFieldError, resetForm }) => {
     } else {
       console.error('An unexpected error occurred:', e)
     }
-    console.log(e)
   }
 }
 </script>

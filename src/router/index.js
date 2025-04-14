@@ -7,6 +7,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import BlankLayout from '@/layouts/BlankLayout.vue'
 import Error404 from '@/views/errors/Error404.vue'
 import ProductIndexView from '@/views/products/IndexView.vue'
+import Error500Vue from '@/views/errors/Error500.vue.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,19 +20,18 @@ const router = createRouter({
           path: '',
           name: 'home',
           component: HomeView,
-          meta: { requiresAuth: false },
         },
         {
           path: 'register',
           name: 'register',
           component: RegisterView,
-          meta: { requiresAuth: false },
+          meta: { requiresGuest: true },
         },
         {
           path: 'login',
           name: 'login',
           component: LoginView,
-          meta: { requiresAuth: false },
+          meta: { requiresGuest: true },
         },
       ],
     },
@@ -53,8 +53,14 @@ const router = createRouter({
       children: [
         {
           path: '404',
-          name: 'errors.401',
+          name: 'errors.404',
           component: Error404,
+          meta: { requiresAuth: false },
+        },
+        {
+          path: '500',
+          name: 'errors.500',
+          component: Error500Vue,
           meta: { requiresAuth: false },
         },
       ],

@@ -7,6 +7,7 @@ import NewsLetterSubscription from '@/components/NewsLetterSubscription.vue'
 import { useAuthStore } from '@/stores/authStore'
 import AppAnnouncement from '@/components/AppAnnouncement.vue'
 import AppIcon from '@/components/icons/AppIcon.vue'
+import { Icon } from '@iconify/vue'
 const auth = useAuthStore()
 const isSidebarOpen = ref(false)
 const toggleSidebar = () => {
@@ -21,7 +22,6 @@ const closeSidebar = () => {
 <template>
   <app-announcement />
 
-  <!-- Sidebar -->
   <div
     class="fixed top-0 md:hidden block left-0 h-full w-full bg-white z-50 transform transition-transform ease-in-out duration-300 shadow-lg"
     :class="isSidebarOpen ? 'translate-x-0' : '-translate-x-full'"
@@ -30,7 +30,6 @@ const closeSidebar = () => {
       <app-search-bar class="flex" />
       <button @click="closeSidebar">
         <Icon icon="iwwa:delete" width="40" height="40" />
-        <!-- <app-icon name="x-mark" class="w-6 h-6 stroke-2" /> -->
       </button>
     </div>
 
@@ -83,7 +82,7 @@ const closeSidebar = () => {
       <app-search-bar class="hidden sm:flex items-center w-xs md:w-sm xl:w-xl" />
       <template v-if="auth.isAuthenticated">
         <router-link to="#">
-          <!-- <app-icon name="shopping-cart" class="w-6 h-6 stroke-2" /> -->
+          <Icon icon="mdi:cart-outline" width="24" height="24" />
         </router-link>
         <app-profile />
       </template>
