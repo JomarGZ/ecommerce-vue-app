@@ -30,11 +30,12 @@ import AppStarRating from './AppStarRating.vue'
       </p>
 
       <!-- Optional: Add to cart button that appears on hover -->
-      <app-dark-button
-        class="absolute bottom-0 left-1/2 cursor-pointer -translate-x-1/2 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 px-6 py-2 rounded-full mb-4 whitespace-nowrap"
+      <router-link
+        to="#"
+        class="text-white bg-black hover:scale-[1.02] hover:shadow-lg active:scale-100 active:shadow-md ease-out absolute bottom-0 left-1/2 cursor-pointer -translate-x-1/2 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 px-6 py-2 rounded-full mb-4 whitespace-nowrap"
       >
-        Add to Cart
-      </app-dark-button>
+        View Product
+      </router-link>
     </div>
   </div>
 </template>

@@ -45,7 +45,6 @@ const handleSubmit = () => {
           >
             <input
               type="checkbox"
-              name="categories[]"
               :id="`cat-${cat.id}`"
               :value="cat.id"
               v-model="selectedCategories"
