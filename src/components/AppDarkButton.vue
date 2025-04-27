@@ -13,7 +13,7 @@ defineProps({
 </script>
 <template>
   <button
-    type="type"
+    :type="type"
     class="text-white px-16 py-1.5 rounded-4xl transition-all duration-300 ease-out"
     :class="[
       'p-2 rounded text-white',
