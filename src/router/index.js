@@ -8,7 +8,7 @@ import BlankLayout from '@/layouts/BlankLayout.vue'
 import Error404 from '@/views/errors/Error404.vue'
 import ProductIndexView from '@/views/products/IndexView.vue'
 import Error500Vue from '@/views/errors/Error500.vue.vue'
-
+import ProductShowView from '@/views/products/ShowView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -43,7 +43,13 @@ const router = createRouter({
           path: '',
           name: 'products.index',
           component: ProductIndexView,
-          meta: { requiresAuth: false },
+          meta: { requiresGuest: true },
+        },
+        {
+          path: ':id',
+          name: 'products.show',
+          component: ProductShowView,
+          meta: { requiresGuest: true },
         },
       ],
     },
